@@ -30,7 +30,7 @@ const WhatIDo = () => {
     <div className="whatIDO" id="skills">
       <div className="what-box">
         <h2 className="title">
-          T<span className="hat-h2">ECHNOLOGY</span>
+          T<span className="hat-h2">ECHNICAL</span>
           <div>
             S<span className="do-h2">KILLS</span>
           </div>

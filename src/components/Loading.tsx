@@ -10,13 +10,14 @@ const Loading = ({ percent }: { percent: number }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [clicked, setClicked] = useState(false);
 
-  if (percent >= 100) {
+  if (percent >= 100 && !loaded) {
     setTimeout(() => {
       setLoaded(true);
       setTimeout(() => {
         setIsLoaded(true);
-      }, 1000);
-    }, 600);
+        setClicked(true);
+      }, 200);
+    }, 200);
   }
 
   useEffect(() => {
@@ -28,10 +29,10 @@ const Loading = ({ percent }: { percent: number }) => {
             module.initialFX();
           }
           setIsLoading(false);
-        }, 900);
+        }, 200);
       }
     });
-  }, [isLoaded]);
+  }, [isLoaded, setIsLoading]);
 
   function handleMouseMove(e: React.MouseEvent<HTMLElement>) {
     const { currentTarget: target } = e;
@@ -46,7 +47,7 @@ const Loading = ({ percent }: { percent: number }) => {
     <>
       <div className="loading-header">
         <a href="/#" className="loader-title" data-cursor="disable">
-          Logo
+          LE HOAI NAM
         </a>
         <div className={`loaderGame ${clicked && "loader-out"}`}>
           <div className="loaderGame-container">
@@ -62,8 +63,8 @@ const Loading = ({ percent }: { percent: number }) => {
       <div className="loading-screen">
         <div className="loading-marquee">
           <Marquee>
-            <span> A Creative Developer</span> <span>A Creative Designer</span>
-            <span> A Creative Developer</span> <span>A Creative Designer</span>
+            <span> Software Engineer</span> <span>Java Backend</span>
+            <span> Full-Stack Dev</span> <span>AI & QA Automation</span>
           </Marquee>
         </div>
         <div
@@ -96,21 +97,14 @@ export const setProgress = (setLoading: (value: number) => void) => {
   let percent: number = 0;
 
   let interval = setInterval(() => {
-    if (percent <= 50) {
-      let rand = Math.round(Math.random() * 5);
-      percent = percent + rand;
+    if (percent < 100) {
+      percent += 10;
+      if (percent > 100) percent = 100;
       setLoading(percent);
     } else {
       clearInterval(interval);
-      interval = setInterval(() => {
-        percent = percent + Math.round(Math.random());
-        setLoading(percent);
-        if (percent > 91) {
-          clearInterval(interval);
-        }
-      }, 2000);
     }
-  }, 100);
+  }, 30);
 
   function clear() {
     clearInterval(interval);
@@ -120,15 +114,16 @@ export const setProgress = (setLoading: (value: number) => void) => {
   function loaded() {
     return new Promise<number>((resolve) => {
       clearInterval(interval);
-      interval = setInterval(() => {
+      let stepInterval = setInterval(() => {
         if (percent < 100) {
-          percent++;
+          percent += 10;
+          if (percent > 100) percent = 100;
           setLoading(percent);
         } else {
           resolve(percent);
-          clearInterval(interval);
+          clearInterval(stepInterval);
         }
-      }, 2);
+      }, 10);
     });
   }
   return { loaded, percent, clear };

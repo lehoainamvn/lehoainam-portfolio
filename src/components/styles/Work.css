@@ -1,6 +1,7 @@
 .work-section h2 {
-  margin-top: 100px;
-  font-size: 70px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-size: 55px;
   font-weight: 500;
 }
 .work-section h2 > span {
@@ -16,27 +17,31 @@
   margin: auto;
   display: flex;
   flex-direction: column;
-  height: 100%;
-  align-content: stretch;
+  height: 100vh;
+  justify-content: space-between;
+  padding-bottom: 30px;
+  box-sizing: border-box;
 }
 .work-flex {
   width: 100%;
   display: flex;
-  height: 100%;
+  height: auto;
+  flex-grow: 1;
   margin-left: -80px;
   padding-right: 120px;
   position: relative;
+  align-items: center;
 }
 .work-box {
-  padding: 80px;
+  padding: 30px 40px;
   display: flex;
   flex-direction: column;
-  width: 600px;
+  width: 520px;
   box-sizing: border-box;
   border-right: 1px solid #363636;
   flex-shrink: 0;
-  gap: 50px;
-  justify-content: start;
+  gap: 20px;
+  justify-content: center;
 }
 .work-flex .work-box:nth-child(even) {
   flex-direction: column-reverse;
@@ -93,6 +98,138 @@
 .work-image-in {
   position: relative;
 }
+
+.work-text-card {
+  width: 100%;
+  height: 240px;
+  max-height: 240px;
+  background: linear-gradient(135deg, #0d0d11 0%, #17171d 100%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  padding: 14px 16px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-decoration: none !important;
+  color: #e2e8f0;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+.work-text-card:hover {
+  border-color: var(--accentColor, #c7a76c);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px -5px rgba(199, 167, 108, 0.2);
+}
+
+.work-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+}
+
+.work-card-dots {
+  display: flex;
+  gap: 6px;
+}
+
+.work-card-dots .dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+}
+.dot-red { background-color: #ef4444; }
+.dot-yellow { background-color: #f59e0b; }
+.dot-green { background-color: #10b981; }
+
+.work-card-title {
+  font-family: var(--font-mono, monospace);
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: var(--accentColor, #c7a76c);
+  font-weight: 600;
+}
+
+.work-card-github {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  font-family: var(--font-mono, monospace);
+  color: #a1a1aa;
+}
+
+.work-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  overflow-y: auto;
+  flex-grow: 1;
+  padding-right: 4px;
+}
+
+.work-card-body::-webkit-scrollbar {
+  width: 4px;
+}
+.work-card-body::-webkit-scrollbar-track {
+  background: transparent;
+}
+.work-card-body::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+.work-card-block {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.work-card-label {
+  font-family: var(--font-mono, monospace);
+  font-size: 10.5px;
+  color: var(--accentColor, #c7a76c);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.work-card-block p {
+  font-size: 11.5px !important;
+  line-height: 16px !important;
+  color: #e2e8f0 !important;
+  margin: 0 !important;
+  font-weight: 300 !important;
+}
+
+.work-card-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.work-card-list li {
+  position: relative;
+  padding-left: 14px;
+  font-size: 11px;
+  line-height: 15px;
+  color: #cbd5e1;
+}
+
+.work-card-list li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--accentColor, #c7a76c);
+}
 .work-link {
   position: absolute;
   bottom: 10px;
@@ -127,20 +264,25 @@
 }
 .work-image img {
   max-width: 100%;
-  max-height: 350px;
+  max-height: 210px;
+  border-radius: 8px;
+  object-fit: cover;
 }
 @media only screen and (max-height: 900px) {
-  .work-image img {
-    max-height: 250px;
+  .work-image img,
+  .work-text-card {
+    max-height: 180px;
+    height: 180px;
   }
   .work-box {
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding: 20px 30px;
+    gap: 15px;
+    width: 460px;
   }
   .work-section h2 {
-    font-size: 60px;
-    margin-bottom: 30px;
-    margin-top: 70px;
+    font-size: 42px;
+    margin-bottom: 15px;
+    margin-top: 20px;
   }
 }
 @media only screen and (max-width: 1400px) {

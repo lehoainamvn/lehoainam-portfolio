@@ -1,4 +1,4 @@
-import { MdArrowOutward, MdCopyright } from "react-icons/md";
+import { MdArrowOutward, MdCopyright, MdFileDownload } from "react-icons/md";
 import "./styles/Contact.css";
 
 const Contact = () => {
@@ -10,58 +10,68 @@ const Contact = () => {
           <div className="contact-box">
             <h4>Email</h4>
             <p>
-              <a href="mailto:example@mail.com" data-cursor="disable">
-                example@mail.com
+              <a href="mailto:naml75803@gmail.com" data-cursor="disable">
+                naml75803@gmail.com
               </a>
             </p>
-            <h4>Phone</h4>
+            <h4>Phone / Zalo</h4>
             <p>
-              <a href="tel:+9199999999" data-cursor="disable">
-                +91 99999 99999
+              <a href="tel:+84937712338" data-cursor="disable">
+                +84 937 712 338
               </a>
             </p>
+            <h4>Location</h4>
+            <p style={{ color: "#aaa", fontSize: "0.95rem" }}>
+              Ho Chi Minh City, Vietnam
+            </p>
           </div>
+
           <div className="contact-box">
-            <h4>Social</h4>
+            <h4>Social & CV</h4>
             <a
-              href="https://github.com"
+              href="https://github.com/lehoainamvn"
               target="_blank"
+              rel="noopener noreferrer"
               data-cursor="disable"
               className="contact-social"
             >
-              Github <MdArrowOutward />
+              GitHub <MdArrowOutward />
             </a>
             <a
-              href="https://www.linkedin.com"
+              href="https://www.linkedin.com/in/lehoainamvn/"
               target="_blank"
+              rel="noopener noreferrer"
               data-cursor="disable"
               className="contact-social"
             >
-              Linkedin <MdArrowOutward />
+              LinkedIn <MdArrowOutward />
             </a>
             <a
-              href="https://x.com"
+              href="https://zalo.me/0937712338"
               target="_blank"
+              rel="noopener noreferrer"
               data-cursor="disable"
               className="contact-social"
             >
-              Twitter <MdArrowOutward />
+              Zalo (+84 937 712 338) <MdArrowOutward />
             </a>
             <a
-              href="https://www.instagram.com"
-              target="_blank"
+              href="/LeHoaiNam_IT.pdf"
+              download="LeHoaiNam_IT.pdf"
               data-cursor="disable"
               className="contact-social"
+              style={{ color: "var(--accentColor)" }}
             >
-              Instagram <MdArrowOutward />
+              Download Curriculum Vitae (PDF) <MdFileDownload />
             </a>
           </div>
+
           <div className="contact-box">
             <h2>
-              Designed and Developed <br /> by <span>Moncy Yohannan</span>
+              Software Engineer Portfolio <br /> by <span>LE HOAI NAM</span>
             </h2>
-            <h5>
-              <MdCopyright /> 2024
+            <h5 style={{ marginTop: "1rem", color: "#aaa", fontSize: "0.85rem" }}>
+              <MdCopyright /> {new Date().getFullYear()} LE HOAI NAM. All Rights Reserved.
             </h5>
           </div>
         </div>

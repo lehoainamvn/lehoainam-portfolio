@@ -2,10 +2,10 @@ import { useEffect } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import HoverLinks from "./HoverLinks";
 import { gsap } from "gsap";
-import { ScrollSmoother } from "gsap-trial/ScrollSmoother";
+import { ScrollSmoother } from "./utils/gsapTrialShims";
 import "./styles/Navbar.css";
 
-gsap.registerPlugin(ScrollSmoother, ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger);
 export let smoother: ScrollSmoother;
 
 const Navbar = () => {
@@ -36,21 +36,15 @@ const Navbar = () => {
       });
     });
     window.addEventListener("resize", () => {
-      ScrollSmoother.refresh(true);
+      ScrollSmoother.refresh();
     });
   }, []);
+
   return (
     <>
       <div className="header">
         <a href="/#" className="navbar-title" data-cursor="disable">
-          Logo
-        </a>
-        <a
-          href="mailto:example@mail.com"
-          className="navbar-connect"
-          data-cursor="disable"
-        >
-          example@mail.com
+          LE HOAI NAM
         </a>
         <ul>
           <li>
@@ -59,8 +53,18 @@ const Navbar = () => {
             </a>
           </li>
           <li>
+            <a data-href="#career" href="#career">
+              <HoverLinks text="EXPERIENCE" />
+            </a>
+          </li>
+          <li>
             <a data-href="#work" href="#work">
               <HoverLinks text="WORK" />
+            </a>
+          </li>
+          <li>
+            <a data-href="#skills" href="#skills">
+              <HoverLinks text="SKILLS" />
             </a>
           </li>
           <li>

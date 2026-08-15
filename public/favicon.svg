@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c0d12"/>
+      <stop offset="100%" stop-color="#181a24"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c7a76c"/>
+      <stop offset="100%" stop-color="#f3d08c"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="128" fill="url(#bg)"/>
+  <rect x="20" y="20" width="472" height="472" rx="108" fill="none" stroke="url(#accent)" stroke-width="14" stroke-opacity="0.35"/>
+  <text x="256" y="318" font-family="'Geist', 'Inter', -apple-system, system-ui, sans-serif" font-weight="900" font-size="200" fill="url(#accent)" text-anchor="middle" letter-spacing="-4">LN</text>
+</svg>

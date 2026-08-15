@@ -7,6 +7,7 @@ const WhatIDo = () => {
   const setRef = (el: HTMLDivElement | null, index: number) => {
     containerRef.current[index] = el;
   };
+
   useEffect(() => {
     if (ScrollTrigger.isTouch) {
       containerRef.current.forEach((container) => {
@@ -24,8 +25,9 @@ const WhatIDo = () => {
       });
     };
   }, []);
+
   return (
-    <div className="whatIDO">
+    <div className="whatIDO" id="skills">
       <div className="what-box">
         <h2 className="title">
           W<span className="hat-h2">HAT</span>
@@ -58,6 +60,8 @@ const WhatIDo = () => {
               />
             </svg>
           </div>
+
+          {/* CARD 1: BACKEND */}
           <div
             className="what-content what-noTouch"
             ref={(el) => setRef(el, 0)}
@@ -87,28 +91,24 @@ const WhatIDo = () => {
             <div className="what-corner"></div>
 
             <div className="what-content-in">
-              <h3>DEVELOP</h3>
-              <h4>Description</h4>
+              <h3>BACKEND</h3>
+              <h4>Java & Spring Boot</h4>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
-                quia aliquid laboriosam ducimus sit molestiae.
+                Building Java microservices, stateless JWT authentication, RESTful APIs, Spring Data JPA / Hibernate, and PostgreSQL database management.
               </p>
               <h5>Skillset & tools</h5>
               <div className="what-content-flex">
-                <div className="what-tags">JavaScript</div>
-                <div className="what-tags">TypeScript</div>
-                <div className="what-tags">Three.js</div>
-                <div className="what-tags">React</div>
-                <div className="what-tags">Css</div>
-                <div className="what-tags">Node.js</div>
-                <div className="what-tags">Next.js</div>
-                <div className="what-tags">Express.js</div>
-                <div className="what-tags">PHP</div>
-                <div className="what-tags">MySql</div>
+                <div className="what-tags">Java</div>
+                <div className="what-tags">Spring Boot</div>
+                <div className="what-tags">Spring Security</div>
+                <div className="what-tags">REST API</div>
+                <div className="what-tags">JWT</div>
               </div>
               <div className="what-arrow"></div>
             </div>
           </div>
+
+          {/* CARD 2: FRONTEND */}
           <div
             className="what-content what-noTouch"
             ref={(el) => setRef(el, 1)}
@@ -127,27 +127,170 @@ const WhatIDo = () => {
               </svg>
             </div>
             <div className="what-corner"></div>
+
             <div className="what-content-in">
-              <h3>DESIGN</h3>
-              <h4>Description</h4>
+              <h3>FRONTEND</h3>
+              <h4>Angular & React.js</h4>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
-                quia aliquid laboriosam ducimus sit molestiae
+                Developing responsive single-page web applications with Angular 17+, React.js, HTML5, CSS3, and JavaScript.
               </p>
               <h5>Skillset & tools</h5>
               <div className="what-content-flex">
-                <div className="what-tags">Blender</div>
-                <div className="what-tags">Zbrush</div>
-                <div className="what-tags">UI Design</div>
-                <div className="what-tags">Motion</div>
-                <div className="what-tags">Rigging</div>
-                <div className="what-tags">3D Animation</div>
-                <div className="what-tags">Character Design</div>
-                <div className="what-tags">Modelling</div>
+                <div className="what-tags">Angular</div>
+                <div className="what-tags">React.js</div>
+                <div className="what-tags">HTML</div>
+                <div className="what-tags">CSS</div>
+                <div className="what-tags">JavaScript</div>
               </div>
               <div className="what-arrow"></div>
             </div>
           </div>
+
+          {/* CARD 3: DATABASE */}
+          <div
+            className="what-content what-noTouch"
+            ref={(el) => setRef(el, 2)}
+          >
+            <div className="what-border1">
+              <svg height="100%">
+                <line
+                  x1="0"
+                  y1="100%"
+                  x2="100%"
+                  y2="100%"
+                  stroke="white"
+                  strokeWidth="2"
+                  strokeDasharray="6,6"
+                />
+              </svg>
+            </div>
+            <div className="what-corner"></div>
+
+            <div className="what-content-in">
+              <h3>DATABASE</h3>
+              <h4>Relational & NoSQL Storage</h4>
+              <p>
+                Database design, entity normalization, query optimization, and management across SQL and NoSQL data stores.
+              </p>
+              <h5>Skillset & tools</h5>
+              <div className="what-content-flex">
+                <div className="what-tags">PostgreSQL</div>
+                <div className="what-tags">SQL Server</div>
+                <div className="what-tags">MongoDB (basic)</div>
+              </div>
+              <div className="what-arrow"></div>
+            </div>
+          </div>
+
+          {/* CARD 4: TOOLS */}
+          <div
+            className="what-content what-noTouch"
+            ref={(el) => setRef(el, 3)}
+          >
+            <div className="what-border1">
+              <svg height="100%">
+                <line
+                  x1="0"
+                  y1="100%"
+                  x2="100%"
+                  y2="100%"
+                  stroke="white"
+                  strokeWidth="2"
+                  strokeDasharray="6,6"
+                />
+              </svg>
+            </div>
+            <div className="what-corner"></div>
+
+            <div className="what-content-in">
+              <h3>TOOLS</h3>
+              <h4>DevOps & Development Workflow</h4>
+              <p>
+                Version control, containerized deployment, API testing, and continuous engineering workflows.
+              </p>
+              <h5>Skillset & tools</h5>
+              <div className="what-content-flex">
+                <div className="what-tags">Git</div>
+                <div className="what-tags">GitHub</div>
+                <div className="what-tags">Docker</div>
+                <div className="what-tags">Postman</div>
+              </div>
+              <div className="what-arrow"></div>
+            </div>
+          </div>
+
+          {/* CARD 5: TESTING */}
+          <div
+            className="what-content what-noTouch"
+            ref={(el) => setRef(el, 4)}
+          >
+            <div className="what-border1">
+              <svg height="100%">
+                <line
+                  x1="0"
+                  y1="100%"
+                  x2="100%"
+                  y2="100%"
+                  stroke="white"
+                  strokeWidth="2"
+                  strokeDasharray="6,6"
+                />
+              </svg>
+            </div>
+            <div className="what-corner"></div>
+
+            <div className="what-content-in">
+              <h3>TESTING</h3>
+              <h4>Automated QA & E2E Suites</h4>
+              <p>
+                Engineering automated Playwright End-to-End (E2E) testing frameworks structured with Page Object Model (POM).
+              </p>
+              <h5>Skillset & tools</h5>
+              <div className="what-content-flex">
+                <div className="what-tags">Playwright</div>
+                <div className="what-tags">E2E Testing</div>
+                <div className="what-tags">Page Object Model (POM)</div>
+              </div>
+              <div className="what-arrow"></div>
+            </div>
+          </div>
+
+          {/* CARD 6: SYSTEM DESIGN */}
+          <div
+            className="what-content what-noTouch"
+            ref={(el) => setRef(el, 5)}
+          >
+            <div className="what-border1">
+              <svg height="100%">
+                <line
+                  x1="0"
+                  y1="100%"
+                  x2="100%"
+                  y2="100%"
+                  stroke="white"
+                  strokeWidth="2"
+                  strokeDasharray="6,6"
+                />
+              </svg>
+            </div>
+            <div className="what-corner"></div>
+
+            <div className="what-content-in">
+              <h3>SYSTEM DESIGN</h3>
+              <h4>Distributed Architecture</h4>
+              <p>
+                Architecting distributed microservice systems, caching layers with Redis, and message queuing with RabbitMQ.
+              </p>
+              <h5>Skillset & tools</h5>
+              <div className="what-content-flex">
+                <div className="what-tags">Microservices (basic)</div>
+                <div className="what-tags">Redis (basic)</div>
+                <div className="what-tags">RabbitMQ (basic)</div>
+              </div>
+              <div className="what-arrow"></div>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>

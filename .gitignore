@@ -1,28 +1,97 @@
-# Logs
-logs
+# ==========================================
+# 1. Word Documents, Reports & Office Files
+# (Prevent pushing private thesis/reports/docs)
+# ==========================================
+*.docx
+*.doc
+*.docm
+*.dotx
+~$*
+*.pdf
+!public/LeHoaiNam_IT.pdf
+!public/*.pdf
+*.xlsx
+*.xls
+*.xlsm
+*.csv
+*.pptx
+*.ppt
+*.odt
+*.ods
+*.odp
+docs/
+reports/
+baocao/
+paper/
+
+# ==========================================
+# 2. Dependencies & Package Managers
+# ==========================================
+node_modules/
+.pnpm-store/
+.yarn/
+package-lock.json.log
+
+# ==========================================
+# 3. Build Outputs & Compilations
+# ==========================================
+dist/
+dist-ssr/
+build/
+out/
+*.tsbuildinfo
+*.timestamp-*.mjs
+
+# ==========================================
+# 4. Environment, Secrets & Credentials
+# ==========================================
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.env
+.npmrc
+backup/
+
+# ==========================================
+# 5. Temporary & Test Artifacts
+# ==========================================
+capture_test.js
+test.js
+test.*
+scratch.*
+logo.png
+*.tmp
+*.bak
+
+# ==========================================
+# 6. System Logs & Diagnostics
+# ==========================================
+logs/
 *.log
 npm-debug.log*
 yarn-debug.log*
-yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
-*.local
+# ==========================================
+# 7. OS & IDE Custom Configurations
+# ==========================================
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+ehthumbs.db
+Desktop.ini
 
-# Editor directories and files
+# Editors
 .vscode/*
 !.vscode/extensions.json
-.idea
-.DS_Store
+!.vscode/settings.json
+.idea/
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
-.npmrc
-
-backup/
-.env

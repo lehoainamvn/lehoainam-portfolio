@@ -57,7 +57,7 @@ export const PORTFOLIO_DATA = {
       university: "Thu Dau Mot University",
       degree: "B.S. Information Technology",
       period: "2022 – 2027",
-      gpa: "8.48 / 10",
+      gpa: "8.51 / 10",
       scholarships: ["Academic Achievement Scholarship (2022)", "Academic Achievement Scholarship (2025)"]
     }
   },

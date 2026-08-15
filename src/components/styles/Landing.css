@@ -363,16 +363,21 @@ h2.landing-info-h2 {
     text-align: left;
     transform: translate(0%, -50%);
     right: auto;
-    left: 56%;
+    left: 68%;
+  }
+
+  .landing-info h3 {
+    font-size: 18px;
   }
 
   .landing-info h2 {
-    font-size: 32px;
-    line-height: 38px;
+    font-size: 28px;
+    line-height: 34px;
+    letter-spacing: 1px;
   }
 
   h2.landing-info-h2 {
-    font-size: 36px;
+    font-size: 32px;
   }
 }
 
@@ -391,43 +396,43 @@ h2.landing-info-h2 {
     text-align: left;
     transform: translate(0%, -50%);
     right: auto;
-    left: 58%;
+    left: 70%;
   }
 
   .landing-info h2 {
-    font-size: 36px;
-    line-height: 42px;
+    font-size: 30px;
+    line-height: 36px;
   }
 
   h2.landing-info-h2 {
-    font-size: 40px;
+    font-size: 34px;
   }
 }
 
 @media screen and (min-width: 1600px) {
   .landing-intro h2 {
-    font-size: 26px;
-  }
-
-  .landing-intro h1 {
-    font-size: 48px;
-    line-height: 44px;
-  }
-
-  .landing-info h3 {
     font-size: 24px;
   }
 
+  .landing-intro h1 {
+    font-size: 44px;
+    line-height: 42px;
+  }
+
+  .landing-info h3 {
+    font-size: 20px;
+  }
+
   .landing-info h2 {
-    font-size: 42px;
-    line-height: 46px;
+    font-size: 34px;
+    line-height: 40px;
   }
 
   h2.landing-info-h2 {
-    font-size: 46px;
+    font-size: 38px;
   }
 
   .landing-info {
-    left: 60%;
+    left: 71%;
   }
 }
